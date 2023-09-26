@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File upload microservice</title>
+</head>
+<body>
+  <div class="header-div">
+    <h2>API Project: File Metadata Microservice</h2>
+    <h3>Usage:</h3>
+    <p>Please Upload a File ...</p>
+  </div>
+  <form method="POST" action="/api/submit">
+    <fieldset style="width: 50%; padding: 2rem;">
+      <input id="fileHolder" style="width: 90px;" type="file" /> <p style="display: inline-block; width: 110px;">No file chosen</p>
+      <input style="display: block; width: 200px; margin: 0 auto;" type="submit" value="Upload" />
+    </fieldset>
+  </form>
+</body>
+</html>
