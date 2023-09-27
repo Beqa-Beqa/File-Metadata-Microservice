@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File upload microservice</title>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const text = document.getElementById("inpText");
+      const fileInput = document.getElementById("fileHolder");
+      
+      fileInput.addEventListener("change", () => {
+        fileInput.files[0] ? text.innerText = fileInput.files[0].name : null;
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="header-div">
@@ -12,9 +22,9 @@
     <h3>Usage:</h3>
     <p>Please Upload a File ...</p>
   </div>
-  <form method="POST" action="/api/submit">
+  <form method="POST" action="/api/submit" enctype="multipart/form-data">
     <fieldset style="width: 50%; padding: 2rem;">
-      <input id="fileHolder" style="width: 90px;" type="file" /> <p style="display: inline-block; width: 110px;">No file chosen</p>
+      <input id="fileHolder" name="upfile" style="width: 90px;" type="file" /> <p id="inpText" style="display: inline-block; width: 110px;">No file chosen</p>
       <input style="display: block; width: 200px; margin: 0 auto;" type="submit" value="Upload" />
     </fieldset>
   </form>
