@@ -16,6 +16,6 @@ npm start #Runs nodemon on index.js that will let you inspect your app on localh
 
 ```
 
-<h4>This project is for exercise solely for file upload purpose</h4>
+<h3>This project is for exercise solely for file upload purpose</h3>
 
-<h3>Keep in mind to create .env file and add your mongodb [MONGO_URI] variable in it with respective value</h3>
+<h4>Keep in mind to create .env file and add your mongodb [MONGO_URI] variable in it with respective value</h4>
